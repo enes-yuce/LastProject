@@ -10,6 +10,8 @@ const Footer = ({ darkMode, language, FooterData }) => {
     window.open(link, "_blank");
   };
 
+
+  
   useEffect(() => {
     axios
       .get("https://661eeda216358961cd932017.mockapi.io/products")
