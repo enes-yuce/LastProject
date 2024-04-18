@@ -23,9 +23,9 @@ const Home = ({
       >
         <div className="grid grid-cols-9">
           <div className="col-start-6">
-            <button onClick={toggleLanguage}>
+            <text onClick={toggleLanguage}>
               {language === "turkish" ? "SWITCH ENG" : "TÜRKÇE'YE GEÇ"}
-            </button>
+            </text>
           </div>
           <div className="col-start-7">
             {" "}
