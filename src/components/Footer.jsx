@@ -10,8 +10,6 @@ const Footer = ({ darkMode, language, FooterData }) => {
     window.open(link, "_blank");
   };
 
-
-  
   useEffect(() => {
     axios
       .get("https://661eeda216358961cd932017.mockapi.io/products")
@@ -33,17 +31,36 @@ const Footer = ({ darkMode, language, FooterData }) => {
             {FooterData && FooterData.header}
           </span>
         </h1>
-        <div className="messageContent">{FooterData && FooterData.content}</div>
+        <div
+          style={{
+            color: darkMode ? "#ffffff" : "#120b39",
+          }}
+          className="messageContent"
+        >
+          {FooterData && FooterData.content}
+        </div>
         <div className="messageMail"> {FooterData && FooterData.email}</div>
         <div className=" mt-2 social-icons flex justify-center items-center gap-2">
-          <FaTwitter size={35} onClick={() => handleClick(FooterData.links.twitter)} />
-          <FaGithub size={35} onClick={() => handleClick(FooterData.links.github)} />
-          <FaEnvelope size={35} onClick={() => handleClick(FooterData.links.email)} />
-          <FaInstagram size={35} onClick={() => handleClick(FooterData.links.instagram)} />
+          <FaTwitter
+            size={35}
+            onClick={() => handleClick(FooterData.links.twitter)}
+          />
+          <FaGithub
+            size={35}
+            onClick={() => handleClick(FooterData.links.github)}
+          />
+          <FaEnvelope
+            size={35}
+            onClick={() => handleClick(FooterData.links.email)}
+          />
+          <FaInstagram
+            size={35}
+            onClick={() => handleClick(FooterData.links.instagram)}
+          />
         </div>
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;
